@@ -22,7 +22,7 @@ const eqArrays = function(arr1, arr2) {
 };
     
 const middle = function(arr) {
-  if (arr.length === 0) {
+  if (arr.length < 3) {
     return []; // Return undefined if the array is empty
   }
   const middleIndex = Math.floor(arr.length / 2); // Search for the mid value by length
