@@ -1,0 +1,57 @@
+const firstNames = [
+    "Karl",
+    "Salima",
+    "Agouhanna",
+    "Fang",
+    "Kavith",
+    "Jason",
+    "Salima",
+    "Fang",
+    "Joe",
+  ];
+  
+  const result1 = countOnly(firstNames, {
+    Jason: true,
+    Karima: true,
+    Fang: true,
+    Agouhanna: false,
+  });
+
+const eqArrays = function(arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+      return false;
+    }
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] !== arr2[i]) {
+        return false;
+      }
+    }
+    return true;
+  };
+    
+  
+  const assertArraysEqual = function(arr1, arr2) {
+    if (eqArrays(arr1, arr2)) { // Call eqArrays with the correct arguments
+      const result_style = `✅✅✅ Assertion Passed: ${arr1} === ${arr2}`;
+      console.log(result_style);
+      return result_style;
+    } else {
+      const result_style = `🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`;
+      console.log(result_style);
+      return result_style;
+    }
+  };
+  
+      
+    
+  console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => should PASS
+  assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
+  
+  console.log(eqArrays([1, 2, 3], [3, 1, 2])); // => false
+  assertArraysEqual([1, 2, 3], [3, 1, 2]); // => false
+  
+  console.log(eqArrays(['1', '2', '3'], ['1', '2', '3'])); // => true
+  assertArraysEqual(['1', '2', '3'], ['1', '2', '3']); // => true
+   
+  console.log(eqArrays(['1', '2', '3'], ['1', '2', 3])); // => false
+  assertArraysEqual(['1', '2', '3'], ['1', '2', 3]); // => false
