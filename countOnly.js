@@ -10,7 +10,21 @@ let result_style;
 // itemsToCount: an object specifying what to count
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
+
+
+  firstNames.forEach(name => {
+    if (results[name]) {
+      results[name] += 1;
+    } else {
+      results[name] = 1;
+    }
+  });
   
+  console.log(results);
+
+
+
+
   for (const item of allItems) {
     console.log(item);
   }
