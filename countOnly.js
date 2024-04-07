@@ -3,35 +3,6 @@
 //let result;
 let result_style;
 
-
-
-
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
-const countOnly = function(allItems, itemsToCount) {
-  const results = {};
-
-
-  firstNames.forEach(name => {
-    if (results[name]) {
-      results[name] += 1;
-    } else {
-      results[name] = 1;
-    }
-  });
-  
-  console.log(results);
-
-
-
-
-  for (const item of allItems) {
-    console.log(item);
-  }
-
-  return results;
-};
-
 const firstNames = [
   "Karl",
   "Salima",
@@ -43,6 +14,32 @@ const firstNames = [
   "Fang",
   "Joe",
 ];
+
+
+
+// allItems: an array of strings that we need to look through
+// itemsToCount: an object specifying what to count
+const countOnly = function(allItems, itemsToCount) {
+  const results = {};
+  //itemsToCount = result1;
+
+
+  allItems.forEach(function(name) {
+    if (itemsToCount[name]) {
+      if (results[name]) {
+        results[name] += 1;
+      } else {
+        results[name] = 1;
+      }
+    }
+  });
+  
+  console.log(results);
+
+
+  return results;
+};
+
 
 const result1 = countOnly(firstNames, {
   Jason: true,
