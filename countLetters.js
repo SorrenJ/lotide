@@ -34,8 +34,11 @@ const assertEqual = function(actual, expected) {
 // TEST CODE
 //assertEqual("Lighthouse Labs", "Bootcamp");
 
-console.log(countLetters("lighthouse in the house"));
 
+console.log(countLetters("lighthouse in the house"));
+let result = countLetters("lighthouse in the house");
+console.log(assertEqual(result['l'], 1));
+console.log(assertEqual(result['i'], 2));
 
 console.log(assertEqual("Lighthouse Labs", "Bootcamp"));
 console.log(assertEqual(1, 1));
