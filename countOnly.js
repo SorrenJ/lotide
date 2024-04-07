@@ -1,6 +1,6 @@
 // FUNCTION IMPLEMENTATION
 
-let result;
+//let result;
 let result_style;
 
 
@@ -8,7 +8,10 @@ let result_style;
 
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
-const countOnly = function (allItems, itemsToCount) {};
+const countOnly = function(allItems, itemsToCount) {
+  const results = {};
+  return results;
+};
 
 const firstNames = [
   "Karl",
