@@ -24,18 +24,6 @@ const assertEqual = function(actual, expected) {
     return result_style;
   };
 
-// FUNCTION IMPLEMENTATION
-const assertObjectsEqual = function (actual, expected) {
-    if (eqObjects(arr1, arr2)) { // Call eqArrays with the correct arguments
-        const result_style = `✅✅✅ Assertion Passed: ${arr1} === ${arr2}`;
-        console.log(result_style);
-        return result_style;
-      } else {
-        const result_style = `🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`;
-        console.log(result_style);
-        return result_style;
-      }
-  };
 
 
 // Returns true if both objects have identical keys with identical values.
@@ -63,10 +51,25 @@ const eqObjects = function (object1, object2) {
 
 };
 
+
+// FUNCTION IMPLEMENTATION
+const assertObjectsEqual = function (actual, expected) {
+    const inspect = require("util").inspect; // Require the util module's inspect function
+    if (eqObjects(actual, expected)) {
+        const result_style = `✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`;
+        console.log(result_style);
+        return result_style;
+    } else {
+        const result_style = `🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`;
+        console.log(result_style);
+        return result_style;
+    }
+};
+
 const shirtObject = { color: "red", size: "medium" };
 Object.keys(shirtObject); // => returns ["color", "size"]
 
-//const anotherShirtObject = { size: "medium", color: "red" };
-//eqObjects(shirtObject, anotherShirtObject); // => true
+const anotherShirtObject = { size: "medium", color: "red" };
+eqObjects(shirtObject, anotherShirtObject); // => true
 //We need to use that return value in combination with assertEquals to test if the function is working correctly.
-//assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
+assertObjectsEqual(shirtObject, anotherShirtObject);
