@@ -1,7 +1,8 @@
+const assert = require('chai').assert;
 const tail = require("../tail");
 const assertEqual = require("../assertEqual");
 
-
+/*
 // TEST CODE
 const original = ["Hello", "Lighthouse", "Labs"];
 console.log(`Original: ${original}`);
@@ -21,3 +22,16 @@ console.log(`INCORRECT CASES`);
 console.log(assertEqual(result.length, 4)); // Ensure we get back two elements
 console.log(assertEqual(result[0], "L")); // Ensure first element is "Lighthouse"
 console.log(assertEqual(result[1], "Sorren")); // Ensure second element is "Labs"
+*/
+
+describe("#tail", () => {
+    it("returns Lighthouse, Labs for [Hello, Lighthouse, Labs]", () => {
+      assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+    });
+  
+    it("returns '2,5' for ['1,2,5']", () => {
+      assert.deepEqual(tail([1,2,5]), [2,5]); 
+    });
+  });
+  
+  
