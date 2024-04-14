@@ -76,3 +76,4 @@ assertEqual(result1["Agouhanna"], undefined);
 console.log(assertEqual("Lighthouse Labs", "Bootcamp"));
 console.log(assertEqual(1, 1));
 
+module.exports = countOnly;
