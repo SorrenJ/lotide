@@ -22,3 +22,5 @@ console.log(results1);
 //Test cases
 assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
 assertArraysEqual(results1, ['s', 'c', 't', 'm', 't']);
+
+module.exports = map;
