@@ -1,0 +1,28 @@
+{
+  "name": "@sorrenj/lotide",
+  "version": "1.0.0",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.3.1"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SorrenJ/lotide.git"
+  },
+  "author": "Sorren Jao",  
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SorrenJ/lotide/issues"
+  },
+  "homepage": "https://github.com/SorrenJ/lotide#readme"
+}
