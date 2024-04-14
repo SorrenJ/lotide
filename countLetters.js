@@ -43,3 +43,4 @@ console.log(assertEqual(result['i'], 2));
 console.log(assertEqual("Lighthouse Labs", "Bootcamp"));
 console.log(assertEqual(1, 1));
 
+module.exports = countLetters;
