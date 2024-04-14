@@ -42,3 +42,5 @@ console.log(assertArraysEqual(letterPositions("hello").e, [1]));
 
 //FAIL
 console.log(assertArraysEqual(letterPositions("hello").h, [2]));
+
+module.exports = letterPositions;
