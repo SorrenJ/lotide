@@ -80,3 +80,5 @@ colors: ["red", "blue"],
 sleeveLength: "long",
 };
 eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject); // => false
+
+module.exports = eqObjects;
