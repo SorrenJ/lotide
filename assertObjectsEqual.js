@@ -73,3 +73,6 @@ const anotherShirtObject = { size: "medium", color: "red" };
 eqObjects(shirtObject, anotherShirtObject); // => true
 //We need to use that return value in combination with assertEquals to test if the function is working correctly.
 assertObjectsEqual(shirtObject, anotherShirtObject);
+
+
+module.exports = assertObjectsEqual;
